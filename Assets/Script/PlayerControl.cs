@@ -47,7 +47,7 @@ public class PlayerControl : MonoBehaviour
 
             transform.localScale = new Vector3(horizontal > 0 ? 0.7f : -0.7f, 0.7f, 0.7f);
             
-            transform.Translate(Vector2.right * horizontal * 1 * Time.deltaTime);
+            transform.Translate(Vector2.right * horizontal * speed * Time.deltaTime);
         }
         else
         {
@@ -80,8 +80,6 @@ public class PlayerControl : MonoBehaviour
                 trans = up;
             }
         }
-
-
 
         Instantiate(bulletPrefab, FirePoint.position, FirePoint.rotation).GetComponent<BulletDir>().dir = transform.localScale.x * 1;
     }

@@ -12,7 +12,11 @@ public class UIManager : MonoBehaviour
     public Text timer;
     public float Temptimer = 60;
 
+    public Text target;
+    public float Temptarget;
+
     public GameObject GameOver;
+    public GameObject Congrats;
 
     void Update()
     {
@@ -23,6 +27,12 @@ public class UIManager : MonoBehaviour
         {
             Temptimer = 0;
             GameOver.SetActive(true);
+            Time.timeScale = 0;
+        }
+
+        if(score >= Temptarget)
+        {
+            Congrats.SetActive(true);
             Time.timeScale = 0;
         }
     }
