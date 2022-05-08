@@ -142,6 +142,8 @@ MonoBehaviour:
   - {fileID: -3306248182744019065, guid: 70154340456d8864b97ba6a7ede818ca, type: 3}
   - {fileID: 7398979571661890971, guid: 70154340456d8864b97ba6a7ede818ca, type: 3}
   - {fileID: -7635938385197694939, guid: 70154340456d8864b97ba6a7ede818ca, type: 3}
+  Range1: 150
+  Range2: 250
 --- !u!114 &4118627934186383960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,4 +156,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 875cfbb10c486364087a8c496e6e2461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 1
+  scoreText: {fileID: 0}

@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerControl : MonoBehaviour
 {
+    public static int Score = 0;
     [SerializeField] float speed;
     [SerializeField] SoundManager soundManager;
     Rigidbody2D rb;
@@ -38,8 +40,17 @@ public class PlayerControl : MonoBehaviour
 
             }
         }
-        
-        
+
+
+        PlayerPrefs.SetInt("score", Score);
+        if(Score > 4)
+        {
+            SceneManager.LoadScene("ScoreBoard");
+        }
+
+
+
+
         float horizontal = Input.GetAxis("Horizontal");
         if (horizontal != 0)
         {

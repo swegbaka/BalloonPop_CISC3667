@@ -7,6 +7,10 @@ public class Balloon : MonoBehaviour
     [SerializeField] Vector3 force;
     [SerializeField] Sprite[] balloonSprites;
 
+    public float Range1;
+    public float Range2;
+
+
     private UIManager UIMgr;
 
 
@@ -27,17 +31,12 @@ public class Balloon : MonoBehaviour
 
         transform.position = new Vector3(Random.Range(-9.4f, 9.4f),transform.position.y, transform.position.z);
         
-        force = new Vector3(Random.Range(-100, 100), Random.Range(150, 250), 0);
+        force = new Vector3(Random.Range(-100, 100), Random.Range(Range1, Range2), 0);
 
         rb.AddForce(force);
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
 
     private void OnTriggerEnter2D(Collider2D collision)

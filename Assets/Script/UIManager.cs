@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
@@ -30,7 +31,26 @@ public class UIManager : MonoBehaviour
             Time.timeScale = 0;
         }
 
-        if(score >= Temptarget)
+        if(score >= Temptarget && Temptarget == 10)
+        {
+            SceneManager.LoadScene("lvl2");
+        }
+
+        if (score >= Temptarget && Temptarget == 15)
+        {
+            SceneManager.LoadScene("lvl3");
+
+        }
+        if ((score >= Temptarget && Temptarget == 8))
+        {
+            Congrats.SetActive(true);
+            Time.timeScale = 0;
+        }
+        if ((score >= Temptarget && Temptarget == 25))
+        {
+            SceneManager.LoadScene("lvl3_harder");
+        }
+        if ((score >= Temptarget && Temptarget == 11))
         {
             Congrats.SetActive(true);
             Time.timeScale = 0;
