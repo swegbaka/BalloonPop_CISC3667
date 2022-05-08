@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 863793518391837597}
   - component: {fileID: 863793518391837570}
   - component: {fileID: 863793518391837571}
+  - component: {fileID: 4118627934186383960}
   m_Layer: 0
   m_Name: Balloon
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 863793518391837574}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.111770004, y: -2.02437, z: 0}
   m_LocalScale: {x: 2.255607, y: 2.0649862, z: 1}
   m_Children: []
@@ -141,3 +142,16 @@ MonoBehaviour:
   - {fileID: -3306248182744019065, guid: 70154340456d8864b97ba6a7ede818ca, type: 3}
   - {fileID: 7398979571661890971, guid: 70154340456d8864b97ba6a7ede818ca, type: 3}
   - {fileID: -7635938385197694939, guid: 70154340456d8864b97ba6a7ede818ca, type: 3}
+--- !u!114 &4118627934186383960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863793518391837574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 875cfbb10c486364087a8c496e6e2461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 1

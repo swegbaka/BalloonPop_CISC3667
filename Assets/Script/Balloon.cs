@@ -7,7 +7,7 @@ public class Balloon : MonoBehaviour
     [SerializeField] Vector3 force;
     [SerializeField] Sprite[] balloonSprites;
 
-    [SerializeField] UIManager UIMgr;
+    private UIManager UIMgr;
 
 
     private Rigidbody2D rb;
@@ -17,6 +17,9 @@ public class Balloon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        UIMgr = GameObject.FindGameObjectWithTag("UIManager").GetComponent<UIManager>();
+        
+        
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 

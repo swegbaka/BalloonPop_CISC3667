@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5582865951531141383}
   - component: {fileID: 5582865951531141382}
   - component: {fileID: 5582865951531141381}
+  - component: {fileID: 8953977479240419009}
+  - component: {fileID: 1461559371454928668}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: bullet
@@ -121,3 +123,35 @@ CircleCollider2D:
   m_Offset: {x: 0.019381046, y: 0}
   serializedVersion: 2
   m_Radius: 2.229309
+--- !u!114 &8953977479240419009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5582865951531141380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 371088615bf34a84fa9f62678a163bab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dir: 1
+--- !u!95 &1461559371454928668
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5582865951531141380}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7da03a341403bc04f8da722ef31068b1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

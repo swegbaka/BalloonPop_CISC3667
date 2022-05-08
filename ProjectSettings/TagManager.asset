@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TopWall
   - bullet
+  - UIManager
   layers:
   - Default
   - TransparentFX
