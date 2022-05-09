@@ -48,7 +48,8 @@ public class UIManager : MonoBehaviour
         }
         if ((score >= Temptarget && Temptarget == 25))
         {
-            SceneManager.LoadScene("lvl3_harder");
+            Congrats.SetActive(true);
+            Time.timeScale = 0;
         }
         if ((score >= Temptarget && Temptarget == 11))
         {

@@ -9,6 +9,7 @@ TagManager:
   - UIManager
   - rightarrow
   - leftarrow
+  - ballon
   layers:
   - Default
   - TransparentFX

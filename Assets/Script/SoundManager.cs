@@ -7,6 +7,10 @@ using UnityEngine.UI;
 public class SoundManager : MonoBehaviour
 {
     [SerializeField] AudioClip shootSound;
+    [SerializeField] AudioClip popSound;
+
+    public AudioClip triggerSound;
+
     private AudioSource src;
     [SerializeField] Slider volumeSlider;
 
@@ -25,6 +29,16 @@ public class SoundManager : MonoBehaviour
     public void PlaySound()
     {
         src.PlayOneShot(shootSound);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (popSound != null)
+        {
+            src.PlayOneShot(popSound, 0.7f);
+            src.PlayOneShot(triggerSound, 0.7f);
+            Destroy(other.gameObject);
+        }
     }
 
     public void ChangeVolume()

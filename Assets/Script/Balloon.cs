@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Balloon : MonoBehaviour
 {
+
+    
+    
     [SerializeField] Vector3 force;
     [SerializeField] Sprite[] balloonSprites;
 
@@ -22,8 +25,9 @@ public class Balloon : MonoBehaviour
     void Start()
     {
         UIMgr = GameObject.FindGameObjectWithTag("UIManager").GetComponent<UIManager>();
-        
-        
+
+
+
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
@@ -39,13 +43,14 @@ public class Balloon : MonoBehaviour
 
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "TopWall")
         {
             Destroy(this.gameObject);
         }else if (collision.gameObject.tag == "bullet")
         {
+            //GetComponent<AudioSource>().Play();
             UIMgr.AddScore();
             Destroy(this.gameObject);
             Destroy(collision.gameObject);
